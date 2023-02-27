@@ -1,6 +1,5 @@
 import lab01.example.model.AccountHolder;
 import lab01.example.model.BankAccount;
-import lab01.example.model.SimpleBankAccount;
 import lab01.example.model.SimpleBankAccountWithAtm;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -20,8 +19,15 @@ public class SimpleBankAccountWithAtmTest {
     }
 
     @Test
-    void testDepositATM() {
+    void testDepositWithATM() {
         bankAccountWithAtm.depositWithAtm(accountHolder.getId(), 200);
         assertEquals(199, bankAccountWithAtm.getBalance());
+    }
+
+    @Test
+    void testWithdrawWithATM() {
+        bankAccountWithAtm.deposit(accountHolder.getId(), 150);
+        bankAccountWithAtm.withdrawWithAtm(accountHolder.getId(), 50);
+        assertEquals(99, bankAccountWithAtm.getBalance());
     }
 }

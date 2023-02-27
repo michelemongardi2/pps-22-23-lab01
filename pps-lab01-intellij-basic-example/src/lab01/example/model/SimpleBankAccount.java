@@ -43,6 +43,11 @@ public class SimpleBankAccount implements BankAccount {
         }
     }
 
+    @Override
+    public void withdrawWithAtm(int id, int i) {
+        return;
+    }
+
     private boolean isWithdrawAllowed(final double amount){
         return this.balance >= amount;
     }
