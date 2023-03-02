@@ -4,6 +4,15 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Exercise 2
+ * Design a test for each method to be implemented for the CircularList
+ * following the order suggested in the provided interface
+ * In some cases, e.g. to test the next() method, more than one test
+ * may improve the test suite
+ * Think about a simple way to keep the internal state of the list
+ */
+
 public class CircularListImpl implements CircularList {
 
     private final List<Integer> circularList;
