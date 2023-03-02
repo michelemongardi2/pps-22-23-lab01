@@ -1,5 +1,6 @@
 import lab01.example.model.AccountHolder;
 import lab01.example.model.BankAccount;
+import lab01.example.model.BankAccountWithAtm;
 import lab01.example.model.SimpleBankAccountWithAtm;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -9,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class SimpleBankAccountWithAtmTest {
 
     private AccountHolder accountHolder;
-    private BankAccount bankAccountWithAtm;
+    private BankAccountWithAtm bankAccountWithAtm;
 
     @BeforeEach
     void beforeEach(){
