@@ -28,4 +28,22 @@ public class CircularListTest {
         this.circularList.add(0);
         assertFalse(this.circularList.isEmpty());
     }
+
+    @Test
+    void testSizeMethod() {
+        this.circularList.add(0);
+        this.circularList.add(1);
+        this.circularList.add(2);
+        assertEquals(3, this.circularList.size());
+    }
+
+    @Test
+    void testNextElementOfTheList() {
+        this.circularList.next();
+        assertFalse(this.circularList.next().isPresent());
+        this.circularList.add(1);
+        assertEquals(1, this.circularList.size());
+        assertTrue(this.circularList.next().isPresent());
+    }
+
 }
