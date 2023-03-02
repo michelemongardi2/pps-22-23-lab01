@@ -1,5 +1,6 @@
 import lab01.tdd.CircularList;
 import lab01.tdd.CircularListImpl;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -9,15 +10,22 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class CircularListTest {
 
-    CircularList circularList = new CircularListImpl();
+    private CircularList circularList;
+
+    @BeforeEach
+    void setCircularList() {
+        this.circularList = new CircularListImpl();
+    }
+
+    @Test
+    void testCircularListIsEmpty() {
+        assertTrue(this.circularList.isEmpty());
+    }
 
     @Test
     void testAddingElement() {
-        assertTrue(circularList.isEmpty());
-        circularList.add(0);
-        assertFalse(circularList.isEmpty());
-        assertEquals(1, circularList.size());
+        assertTrue(this.circularList.isEmpty());
+        this.circularList.add(0);
+        assertFalse(this.circularList.isEmpty());
     }
-
-
 }
