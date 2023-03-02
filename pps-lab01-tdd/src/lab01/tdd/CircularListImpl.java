@@ -33,7 +33,7 @@ public class CircularListImpl implements CircularList {
         if(this.circularList.isEmpty())
             return Optional.empty();
         else {
-            if(this.circularList.size()-1 == this.index)
+            if(this.circularList.size() == this.index)
                 this.index = 0;
             return Optional.of(this.circularList.get(this.index++));
         }
