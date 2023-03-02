@@ -64,4 +64,18 @@ public class CircularListTest {
         assertEquals(Optional.of(0), this.circularList.next());
     }
 
+    @Test
+    void testPreviousElementOfTheList() {
+        this.circularList.add(100);
+        assertEquals(Optional.of(100), this.circularList.previous());
+        assertEquals(Optional.of(100), this.circularList.previous());
+    }
+
+    @Test
+    void testPreviousCircular() {
+        this.circularList.previous();
+        assertFalse(this.circularList.next().isPresent());
+        testSizeMethod();
+        assertEquals(Optional.of(2), this.circularList.previous());
+    }
 }
