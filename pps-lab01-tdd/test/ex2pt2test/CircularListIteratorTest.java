@@ -48,14 +48,15 @@ public class CircularListIteratorTest {
         assertEquals(1, this.circularList.forwardIterator().next());
         this.circularList.forwardIterator().next();
         assertEquals(0, this.circularList.forwardIterator().next());
+        this.circularList.forwardIterator().next();
     }
 
     @Test
-    void testHasNextForwardIterator() {
-        testSizeMethod();
-        while(this.circularList.forwardIterator().hasNext()){
-            System.out.println(this.circularList.forwardIterator().next());
-        }
+    void testBackwardIterator() {
+        testForwardIterator();
+        assertEquals(2, this.circularList.backwardIterator().next());
+        this.circularList.backwardIterator().next();
+        assertEquals(0, this.circularList.backwardIterator().next());
     }
 
 }

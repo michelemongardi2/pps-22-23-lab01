@@ -59,8 +59,18 @@ public class CircularListIteratorImpl implements CircularListIterator {
 
     @Override
     public Iterator<Integer> backwardIterator() {
-        return this.circularList.iterator();
+        return new Iterator<Integer>() {
+            @Override
+            public boolean hasNext() {
+                return !circularList.isEmpty();
+            }
+
+            @Override
+            public Integer next() {
+                if(index < 0)
+                    index = circularList.size()-1;
+                return circularList.get(index--);
+            }
+        };
     }
-
-
 }
