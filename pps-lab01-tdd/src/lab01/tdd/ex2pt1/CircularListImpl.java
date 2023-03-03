@@ -1,4 +1,4 @@
-package lab01.tdd;
+package lab01.tdd.ex2pt1;
 
 import java.util.LinkedList;
 import java.util.List;

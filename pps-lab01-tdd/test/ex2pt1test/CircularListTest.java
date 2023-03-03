@@ -1,5 +1,7 @@
-import lab01.tdd.CircularList;
-import lab01.tdd.CircularListImpl;
+package ex2pt1test;
+
+import lab01.tdd.ex2pt1.CircularList;
+import lab01.tdd.ex2pt1.CircularListImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
