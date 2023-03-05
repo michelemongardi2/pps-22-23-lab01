@@ -5,8 +5,6 @@ import lab01.tdd.ex2pt2.CircularListIteratorImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.Optional;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
